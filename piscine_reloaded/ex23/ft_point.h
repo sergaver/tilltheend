@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 12:58:57 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 20:44:47 by swoman           ###   ########.fr       */
+/*   Created: 2019/04/19 20:08:11 by swoman            #+#    #+#             */
+/*   Updated: 2019/04/19 21:07:55 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-void	ft_print_alphabet(void)
+typedef struct		s_point
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
-}
+	int x;
+	int y;
+}					t_point;
+
+void				set_point(t_point *point);
+#endif

@@ -6,11 +6,11 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 14:13:33 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/12 15:08:17 by swoman           ###   ########.fr       */
+/*   Updated: 2019/04/19 20:51:05 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int		ft_sqrt(int nb)
 {
 	int x;
 	int nx;
@@ -19,9 +19,9 @@ int ft_sqrt(int nb)
 	while (1)
 	{
 		nx = (x + nb / x) >> 1;
-		if (x == nx && x*x == nb)
+		if (x == nx && x * x == nb)
 			return (x);
-		if (nb <= 0 || nb > 2147483647 || (x == nx && x*x != nb))
+		if (nb <= 0 || nb > 2147483647 || (x == nx && x * x != nb))
 			return (0);
 		x = nx;
 	}

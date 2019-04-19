@@ -1,1 +1,1 @@
-find . \( -name "*.sh"  \) -print | sed 's/.sh//' | sed 's/.sh//' | cut -d / -f 2
+find . \( -name '*.sh' \) -print | sed 's/\(.*\)\///g' | sed 's/\.sh//g'

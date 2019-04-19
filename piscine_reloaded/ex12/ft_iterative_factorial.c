@@ -6,11 +6,11 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 13:34:39 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/12 13:41:31 by swoman           ###   ########.fr       */
+/*   Updated: 2019/04/19 20:47:57 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int		ft_iterative_factorial(int nb)
 {
 	int nb;
 
@@ -28,5 +28,4 @@ int ft_iterative_factorial(int nb)
 	if (i == 0 || i == 1)
 		return (1);
 	return (nb);
-
 }

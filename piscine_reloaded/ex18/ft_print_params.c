@@ -6,22 +6,29 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 15:32:32 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/12 15:43:32 by swoman           ###   ########.fr       */
+/*   Updated: 2019/04/19 20:51:54 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(int argc, char **argv)
+#include <unistd.h>
+
+int		main(int argc, char **argv)
 {
 	int i;
+	int j;
 
 	i = 1;
-	while (i <= argc)
+	j = 0;
+	while (i < argc)
 	{
-		while (argv[i])
+		while (argv[i][j] != '\0')
 		{
-			write(1, &argv[i], 1);
-			argv[i]++;
+			write(1, &argv[i][j], 1);
+			j++;
 		}
+		write(1, "\n", 1);
+		j = 0;
 		i++;
 	}
+	return (0);
 }

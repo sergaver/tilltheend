@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 12:58:57 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 20:44:47 by swoman           ###   ########.fr       */
+/*   Created: 2019/04/19 19:55:42 by swoman            #+#    #+#             */
+/*   Updated: 2019/04/19 19:55:51 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_print_alphabet(void)
+int		*ft_range(int min, int max)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int *arr;
+	int i;
+
+	if (min >= max)
+	{
+		return (NULL);
+	}
+	i = 0;
+	arr = (int *)malloc(sizeof(*arr) * (max - min));
+	while (min < max)
+	{
+		arr[i] = min;
+		i++;
+		min++;
+	}
+	arr[i] = '\0';
+	return (arr);
 }

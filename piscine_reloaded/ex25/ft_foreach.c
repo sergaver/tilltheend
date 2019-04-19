@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 12:58:57 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 20:44:47 by swoman           ###   ########.fr       */
+/*   Created: 2019/04/19 20:27:12 by swoman            #+#    #+#             */
+/*   Updated: 2019/04/19 21:09:24 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int i;
+
+	i = 0;
+	while (i < length)
+	{
+		f(tab[i]);
+		i++;
+	}
 }

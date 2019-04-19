@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 12:58:57 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 20:44:47 by swoman           ###   ########.fr       */
+/*   Created: 2019/04/19 20:29:39 by swoman            #+#    #+#             */
+/*   Updated: 2019/04/19 20:29:42 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int		ft_count_if(char **tab, int (*f)(char*))
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int count;
+
+	count = 0;
+	while (*tab)
+	{
+		count += (f(*tab) == 1) ? 1 : 0;
+		tab++;
+	}
+	return (count);
 }
