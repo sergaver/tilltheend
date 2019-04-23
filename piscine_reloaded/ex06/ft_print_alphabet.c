@@ -6,13 +6,20 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 12:58:57 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 20:44:47 by swoman           ###   ########.fr       */
+/*   Updated: 2019/04/23 19:29:58 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	char current;
+
+	current = 'a';
+	while (current <= 'z')
+	{
+		ft_putchar(current);
+		current++;
+	}
 }

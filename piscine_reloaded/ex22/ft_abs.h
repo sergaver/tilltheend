@@ -6,11 +6,11 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 19:58:45 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 21:04:27 by swoman           ###   ########.fr       */
+/*   Updated: 2019/04/23 19:55:16 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
-# define ABS(Value) (((value) > 0) ? (Value) : (-Value))
+# define ABS(Value) (((Value) > 0) ? (Value) : (-Value))
 #endif

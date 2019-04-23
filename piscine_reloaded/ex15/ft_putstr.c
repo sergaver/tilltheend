@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+void	ft_putchar(char c);
+
 void	ft_putstr(char *str)
 {
-	while (*str)
+	while (*str != '\0')
 	{
-		write(1, &str, 1);
+		ft_putchar(*str);
 		str++;
 	}
 }

@@ -6,18 +6,21 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 13:34:39 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/19 20:47:57 by swoman           ###   ########.fr       */
+/*   Updated: 2019/04/23 19:37:50 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_iterative_factorial(int nb)
 {
-	int nb;
+	int i;
 
 	i = nb;
+	nb = 1;
 	if (i < 0 || i >= 13)
+	{
 		return (0);
-	if (i > 1)
+	}
+	else if (i > 1)
 	{
 		while (i > 1)
 		{
@@ -25,7 +28,9 @@ int		ft_iterative_factorial(int nb)
 			i--;
 		}
 	}
-	if (i == 0 || i == 1)
-		return (1);
+	else if (i == 0 || i == 1)
+	{
+		nb = 1;
+	}
 	return (nb);
 }

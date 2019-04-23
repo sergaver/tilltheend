@@ -1,1 +1,1 @@
-ifconfig | grep 'ether ' | sed 's/ether //' | cut -c 2-24
+ifconfig | grep 'ether ' | cut -d ' ' -f 2
