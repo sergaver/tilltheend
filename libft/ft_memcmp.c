@@ -6,7 +6,7 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 21:12:47 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/26 21:38:26 by swoman           ###   ########.fr       */
+/*   Updated: 2019/05/01 17:37:20 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;
-
 	while (n--)
 	{
 		if (str1 == str2 && str2 == '\0')

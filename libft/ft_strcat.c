@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/26 20:57:33 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 17:36:55 by swoman           ###   ########.fr       */
+/*   Created: 2019/05/01 17:56:38 by swoman            #+#    #+#             */
+/*   Updated: 2019/05/01 18:08:43 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
+	while (*s1)
 	{
-		if (((char *)s)[i] == c)
-			return (&((char *)s)[i]);
-		else
-			i++;
+		s1++;
 	}
-	return (NULL);
+	while (*s2)
+	{
+		*s1 = *s2;
+		s1++;
+		s2++;
+	}
+	*s1 = '\0';
+	return (s1);
 }

@@ -6,7 +6,7 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/14 12:53:38 by swoman            #+#    #+#             */
-/*   Updated: 2019/04/26 20:05:59 by swoman           ###   ########.fr       */
+/*   Updated: 2019/05/01 17:40:41 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *buf;
-	int i;
-	size_t length;
-	
+	char	*buf;
+	int		i;
+	size_t	length;
+
 	length = len;
 	i = 0;
 	buf = (char *)malloc(sizeof(char *) * len);

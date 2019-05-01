@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/26 20:57:33 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 17:36:55 by swoman           ###   ########.fr       */
+/*   Created: 2019/05/01 19:41:33 by swoman            #+#    #+#             */
+/*   Updated: 2019/05/01 20:22:43 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t i;
+	const char *buf;
 
-	i = 0;
-	while (i < n)
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (*haystack)
 	{
-		if (((char *)s)[i] == c)
-			return (&((char *)s)[i]);
+		if (*haystack == *needle)
+		{
+			buf = haystack;
+			while (*haystack == *needle && *needle)
+			{
+				haystack++;
+				needle++;
+				if (*needle == '\0')
+					return ((char *)buf);
+			}
+		}
 		else
-			i++;
+			haystack++;
 	}
 	return (NULL);
 }

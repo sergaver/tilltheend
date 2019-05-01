@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/26 20:57:33 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 17:36:55 by swoman           ###   ########.fr       */
+/*   Created: 2019/05/01 16:59:54 by swoman            #+#    #+#             */
+/*   Updated: 2019/05/01 17:40:12 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strdup(char *src)
 {
-	size_t i;
+	char	*dest;
+	char	*str;
+	char	*res;
+	int		count;
 
-	i = 0;
-	while (i < n)
+	count = 0;
+	*str = *src;
+	res = src;
+	while (*str != '\0')
 	{
-		if (((char *)s)[i] == c)
-			return (&((char *)s)[i]);
-		else
-			i++;
+		count++;
+		str++;
 	}
-	return (NULL);
+	dest = (char*)malloc(sizeof(*src) * (int)count);
+	if (dest == NULL)
+		return (NULL);
+	while (*src)
+	{
+		*dest++ = *src++;
+	}
+	*dest = '\0';
+	return (res);
 }
