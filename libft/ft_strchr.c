@@ -6,16 +6,21 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 19:22:38 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 19:32:22 by swoman           ###   ########.fr       */
+/*   Updated: 2019/05/02 19:28:41 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
+	char ch;
+
+	ch = c;
 	while (*s)
 	{
-		if (((char *)s) == c)
-			return (&(char *)s);
+		if (*s == ch)
+			return ((char *)s);
 		else
 			s++;
 	}

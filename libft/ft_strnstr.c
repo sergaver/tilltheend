@@ -6,57 +6,33 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 20:24:56 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 20:29:14 by swoman           ###   ########.fr       */
+/*   Updated: 2019/05/02 18:37:25 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const char *buf;
+	char	c;
+	char	sc;
+	size_t	needlen;
 
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (*haystack && len >= 0)
+	c = *needle++;
+	if (c != '\0')
 	{
-		if (*haystack == *needle)
+		needlen = ft_strlen(needle);
+		while (ft_strncmp(haystack, needle, needlen) != 0)
 		{
-			buf = haystack;
-			while (*haystack == *needle && *needle && len >= 0)
+			while (sc != c)
 			{
-				haystack++;
-				needle++;
-				len--;
-				if (*needle == '\0')
-					return ((char *)buf);
+				if (len-- < 1 || (sc = *haystack++) == '\0')
+					return (NULL);
 			}
+			if (needlen > len)
+				return (NULL);
 		}
-		else
-		{
-			haystack++;
-			len--;
-		}
+		haystack--;
 	}
-	return (NULL);
-}
-
-
-#include <string.h>
-
-char *strnstr(const char *haystack, const char *needle, size_t len)
-{
-        int i;
-        size_t needle_len;
-
-        if (0 == (needle_len = strnlen(needle, len)))
-                return (char *)haystack;
-
-        for (i=0; i<=(int)(len-needle_len); i++)
-        {
-                if ((haystack[0] == needle[0]) &&
-                        (0 == strncmp(haystack, needle, needle_len)))
-                        return (char *)haystack;
-
-                haystack++;
-        }
-        return NULL;
+	return ((char *)haystack);
 }

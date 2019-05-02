@@ -6,7 +6,7 @@
 #    By: swoman <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/14 14:11:23 by swoman            #+#    #+#              #
-#    Updated: 2019/04/26 18:43:17 by swoman           ###   ########.fr        #
+#    Updated: 2019/05/02 19:22:49 by swoman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME):
 	@ar rc $(NAME) $(SRC_O)
 
 clean:
-	@rm $(SRC_O)
+	@rm -f $(SRC_O)
 
 fclean: clean
 	@rm $(NAME)

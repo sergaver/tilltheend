@@ -6,13 +6,13 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 18:02:10 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 18:08:24 by swoman           ###   ########.fr       */
+/*   Updated: 2019/05/02 17:21:06 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*strncat(char *s1, const char *s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	size_t len;
 

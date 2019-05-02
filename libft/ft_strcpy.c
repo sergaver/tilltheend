@@ -6,19 +6,19 @@
 /*   By: swoman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 17:41:12 by swoman            #+#    #+#             */
-/*   Updated: 2019/05/01 17:44:53 by swoman           ###   ########.fr       */
+/*   Updated: 2019/05/02 17:14:40 by swoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char *res;
 
-	res = dest;
+	res = dst;
 	while (*src)
 	{
-		*dest++ = *src++;
+		*dst++ = *src++;
 	}
-	*dest = '\0';
+	*dst = '\0';
 	return (res);
 }
